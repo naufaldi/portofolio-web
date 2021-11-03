@@ -8,15 +8,45 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      backgroundImage: {
+        'gradient-hero': 'linear-gradient(to bottom, #62D9FF, #3BF686)',
+      },
       fontFamily: {
-        primary: ['Inter', ...fontFamily.sans],
+        sora: ['Sora', ...fontFamily.sans],
       },
       colors: {
         primary: {
           400: '#00E0F3',
           500: '#00c4fd',
         },
-        dark: '#222222',
+        ocean: {
+          50: '#f6fbff',
+          100: '#edf6ff',
+          200: '#d2eaff',
+          300: '#b7ddff',
+          400: '#82c3ff',
+          500: '#4CA9FF',
+          600: '#4498e6',
+          700: '#397fbf',
+          800: '#2e6599',
+          900: '#25537d',
+        },
+        leaf: {
+          50: '#f5fff9',
+          100: '#ebfef3',
+          200: '#cefde1',
+          300: '#b1fbcf',
+          400: '#76f9aa',
+          500: '#3BF686',
+          600: '#35dd79',
+          700: '#2cb965',
+          800: '#239450',
+          900: '#1d7942',
+        },
+        dark: {
+          DEFAULT: '#272727',
+          100: '#3A3636',
+        },
       },
       keyframes: {
         flicker: {
