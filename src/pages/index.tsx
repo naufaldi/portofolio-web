@@ -1,8 +1,8 @@
 import * as React from 'react';
 
-import Seo from '@/components/Seo';
-import Layout from '@/components/layout';
 import Hero from '@/components/homepage/Hero';
+import Layout from '@/components/layout';
+import Seo from '@/components/Seo';
 
 export default function HomePage() {
   return (
