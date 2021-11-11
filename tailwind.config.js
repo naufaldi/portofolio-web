@@ -13,11 +13,23 @@ module.exports = {
       },
       fontFamily: {
         sora: ['Sora', ...fontFamily.sans],
+        inter: ['Inter', ...fontFamily.sans],
       },
       colors: {
         primary: {
           400: '#00E0F3',
           500: '#00c4fd',
+        },
+        gray: {
+          100: '#D6D6D6',
+          200: '#BDBDBD',
+          300: '#C9C9C9',
+          400: '#757575',
+          500: '#616161',
+          600: '#424242',
+          700: '#212121',
+          800: '#000000',
+          900: '#000000',
         },
         ocean: {
           50: '#f6fbff',
@@ -30,6 +42,18 @@ module.exports = {
           700: '#397fbf',
           800: '#2e6599',
           900: '#25537d',
+        },
+        sky: {
+          50: '#f7fdff',
+          100: '#effbff',
+          200: '#d8f6ff',
+          300: '#c0f0ff',
+          400: '#91e4ff',
+          500: '#62d9ff',
+          600: '#58c3e6',
+          700: '#4aa3bf',
+          800: '#3b8299',
+          900: '#306a7d',
         },
         leaf: {
           50: '#f5fff9',
@@ -46,6 +70,7 @@ module.exports = {
         dark: {
           DEFAULT: '#272727',
           100: '#3A3636',
+          200: '#323443',
         },
       },
       keyframes: {

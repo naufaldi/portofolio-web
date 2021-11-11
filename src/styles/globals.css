@@ -9,6 +9,9 @@
   body {
     @apply bg-dark font-sora;
   }
+  p {
+    @apply font-inter;
+  }
 }
 
 @layer utilities {
