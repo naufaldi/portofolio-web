@@ -5,7 +5,7 @@ import Section from '../common/Section';
 
 const WhatIdo: FC = () => {
   return (
-    <Section name='biography' className='pt-7 px-6'>
+    <Section name='biography' className='pt-7 '>
       <Grid className='w-full'>
         <h1 className='text-white col-span-full text-xl text-center'>
           What I do

@@ -7,7 +7,7 @@ import Section from '../common/Section';
 
 const Skill: FC = () => {
   return (
-    <Section name='skill' className='mt-20 px-6'>
+    <Section name='skill' className='mt-20 '>
       <Grid className='w-full gap-y-12'>
         <div className='col-span-full px-8'>
           <Card
