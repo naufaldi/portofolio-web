@@ -17,6 +17,7 @@
   "dependencies": {
     "@heroicons/react": "^1.0.5",
     "@svgr/webpack": "^5.5.0",
+    "@tailwindcss/aspect-ratio": "^0.3.0",
     "@tailwindcss/forms": "^0.3.3",
     "autoprefixer": "^10.3.5",
     "clsx": "^1.1.1",

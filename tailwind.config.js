@@ -10,6 +10,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         'gradient-hero': 'linear-gradient(to bottom, #62D9FF, #3BF686)',
+        'gradient-project': 'linear-gradient(0deg, #323443, #323443), #EFF6FF',
       },
       fontFamily: {
         sora: ['Sora', ...fontFamily.sans],
@@ -71,6 +72,10 @@ module.exports = {
           DEFAULT: '#272727',
           100: '#3A3636',
           200: '#323443',
+          300: '#3F4152',
+        },
+        light: {
+          DEFAULT: '#EFF6FF',
         },
       },
       keyframes: {
@@ -94,5 +99,8 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [require('@tailwindcss/forms')],
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/aspect-ratio'),
+  ],
 };
