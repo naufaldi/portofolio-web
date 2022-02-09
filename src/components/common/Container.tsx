@@ -6,7 +6,12 @@ const Container: FC<{ className?: string; children: ReactNode }> = ({
   children,
 }) => {
   return (
-    <div className={clsx('max-w-screen-sm w-full px-6 sm:px-4', className)}>
+    <div
+      className={clsx(
+        'max-w-screen-sm w-full px-6 sm:px-4 mx-auto xl:max-w-screen-xl',
+        className
+      )}
+    >
       {children}
     </div>
   );

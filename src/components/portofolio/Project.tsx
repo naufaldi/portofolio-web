@@ -19,7 +19,7 @@ const Project = () => {
             <h6 className='text-gray-200 text-base mb-[14px] font-bold'>
               Web Development
             </h6>
-            <div className='w-full h-auto mb-12'>
+            <div className='w-full h-auto mb-5'>
               <div className='bg-dark-200 relative flex flex-col px-4'>
                 <button className='h-6 w-6 flex items-center justify-center rounded bg-dark-300 mt-2 ml-auto'>
                   <ArrowUpIcon className='h-4 w-4 transform rotate-45 text-gray-100' />

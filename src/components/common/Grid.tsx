@@ -6,7 +6,9 @@ const Grid: FC<{ className?: string; children: ReactNode }> = ({
   children,
 }) => {
   return (
-    <div className={clsx('grid grid-cols-4 gap-x-3', className)}>
+    <div
+      className={clsx('grid grid-cols-4 gap-x-3 xl:grid-cols-12', className)}
+    >
       {children}
     </div>
   );

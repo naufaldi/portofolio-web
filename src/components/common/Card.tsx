@@ -10,7 +10,7 @@ const Card: FC<{
   return (
     <div
       className={clsx(
-        'relative pl-[18px] pr-4 pt-[26px] pb-[13px] bg-dark-200 rounded-xl',
+        'relative pl-[18px] pr-4 pt-[26px] pb-[13px] bg-dark-200 rounded-xl xl:max-w-[260px]',
         className
       )}
     >
@@ -24,7 +24,7 @@ const Card: FC<{
           <h4 className='text-white text-sm leading-6 mt-2 text-center'>
             {title}
           </h4>
-          <p className='text-gray-300 text-center text-sm leading-6'>
+          <p className='text-gray-300 text-center text-sm leading-6 xl:leading-[26px]'>
             {caption}
           </p>
         </div>

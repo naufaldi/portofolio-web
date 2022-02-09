@@ -6,7 +6,10 @@ const Section: FC<{ name: string; children: ReactNode; className?: string }> =
     return (
       <section
         id={name}
-        className={clsx('w-full px-6 max-w-md mx-auto', className)}
+        className={clsx(
+          'w-full px-6 max-w-md mx-auto xl:max-w-screen-xl',
+          className
+        )}
       >
         {children}
       </section>
