@@ -2,7 +2,7 @@ import React from 'react';
 
 import Layout from '@/components/layout';
 import Hero from '@/components/portofolio/Hero';
-import Project from '@/components/portofolio/Project';
+import ListProject from '@/components/portofolio/ListProject';
 import Seo from '@/components/Seo';
 
 const Portofolio = () => {
@@ -11,7 +11,7 @@ const Portofolio = () => {
       <Seo description='portofolio-naufaldi' />
       <Layout>
         <Hero />
-        <Project />
+        <ListProject />
       </Layout>
     </>
   );
