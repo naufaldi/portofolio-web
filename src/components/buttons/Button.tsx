@@ -16,7 +16,7 @@ export default function Button({
     <button
       {...rest}
       className={clsx(
-        'py-2 px-4 rounded font-bold hover:text-primary-400 animated-underline',
+        'py-2 px-4 rounded text-sm sm:text-tiny font-bold hover:text-primary-400 animated-underline',
         'border ',
         'focus:outline-none focus-visible:text-primary-400',
         {

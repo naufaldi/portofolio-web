@@ -4,7 +4,7 @@ import LabelIcon from '../common/LabelIcon';
 
 const ItemSnippet = () => {
   return (
-    <div className='aspect-w-3 aspect-h-2'>
+    <div className='aspect-w-3 aspect-h-2 lg:aspect-w-5 lg:aspect-h-2'>
       <div className='bg-dark-200 px-[26px] py-6 flex flex-col w-full h-full rounded-xl'>
         <h4 className='text-white font-bold text-xl mb-4 font-sora'>
           Nextjs Starter

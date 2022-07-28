@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import { GiHamburgerMenu } from 'react-icons/gi';
 
 import Button from '../buttons/Button';
 import Grid from '../common/Grid';
@@ -18,8 +19,11 @@ const ListProject: FC = () => {
         <div className='col-span-full'>
           <Project />
         </div>
-        <div className='col-span-2'>
-          <Button variants='primary'>See More</Button>
+        <div className='col-span-2 my-4 sm:my-0'>
+          <Button variants='primary' className='flex items-center'>
+            {' '}
+            <GiHamburgerMenu className='h-4 w-4 mr-2' /> See More
+          </Button>
         </div>
       </Grid>
     </Section>

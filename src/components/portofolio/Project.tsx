@@ -19,8 +19,8 @@ const Project = () => {
           </h6>
           <div className='w-full h-auto mb-5 lg:w-5/12'>
             <div className='bg-dark-200 relative flex flex-col px-4'>
-              <button className='h-6 w-6 flex items-center justify-center rounded bg-dark-300 mt-2 ml-auto'>
-                <ArrowUpIcon className='h-4 w-4 transform rotate-45 text-gray-100' />
+              <button className='h-6 w-6 lg:h-9 lg:w-9 flex items-center justify-center rounded bg-dark-300 mt-2 lg:mt-4 ml-auto'>
+                <ArrowUpIcon className='h-4 w-4 lg:h-5 lg:aspect-w-9 transform rotate-45 text-gray-100' />
               </button>
               <div className='flex flex-col px-2 h-72 overflow-hidden'>
                 <div className='flex space-x-2 '>
@@ -58,10 +58,10 @@ const Project = () => {
             </div>
           </div>
           <div className='flex flex-col lg:w-5/12'>
-            <h6 className='text-gray-200 font-bold mb-5 font-inter'>
+            <h6 className='text-gray-200 font-bold mb-5 font-inter hidden sm:block lg:mt-4'>
               Web Development
             </h6>
-            <h3 className='text-white text-5xl mb-7 font-sora font-bold'>
+            <h3 className='text-white text-5xl mb-7 font-sora font-bold hidden sm:block'>
               Bolder Landingpage
             </h3>
             <p className='text-gray-200 text-sm lg:text-lg font-inter leading-6 lg:leading-normal'>
