@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React, { FC } from 'react';
 
 import Card from '../common/Card';
@@ -6,14 +7,24 @@ import Section from '../common/Section';
 
 const Benefit: FC = () => {
   return (
-    <Section name='benefit' className='w-full pt-12'>
+    <Section name='benefit' className='w-full pt-12 xl:pt-28'>
       <Grid>
-        <div className='col-span-full mb-20'>
-          <h2 className='text-white text-2xl text-center'>
+        <div className='col-span-full xl:col-span-4 mb-20 flex flex-col'>
+          <h2 className='text-white text-2xl xl:text-5xl font-bold text-center xl:text-left mb-0 xl:mb-6'>
             Keuntungan Mentorship
           </h2>
+          <div className='w-full h-[400px] relative -ml-8 hidden xl:block'>
+            <Image
+              height={400}
+              width={400}
+              objectFit='cover'
+              layout='fill'
+              src='/image/mentorship/person-white.png'
+              alt='Person White Mentorship'
+            />
+          </div>
         </div>
-        <div className='col-span-full space-y-20'>
+        <div className='col-span-full xl:col-span-8 space-y-20'>
           <Card
             image='👨‍🏫 '
             title='Mentorship 1 : 1'

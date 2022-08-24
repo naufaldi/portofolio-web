@@ -6,7 +6,7 @@ import Section from '../common/Section';
 
 const Weeks = () => {
   return (
-    <Section name='weeks'>
+    <Section name='weeks' className='block xl:hidden'>
       <Grid>
         <div className='flex flex-col  py-5 pl-9 pr-2 col-span-full'>
           <div className='bg-dark-200 rounded-xl py-5 space-y-5'>

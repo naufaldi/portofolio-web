@@ -32,7 +32,9 @@ const HeaderDekstop: FC = () => {
             offset !== 0 ? ' mb-4' : ' mb-10'
           )}
         >
-          <h1 className='font-bold text-2xl'>Naufaldi</h1>
+          <UnstyledLink href={'/'}>
+            <p className='font-bold text-2xl'>Naufaldi</p>
+          </UnstyledLink>
           <div className='flex w-7/12 lg:w-5/12 justify-between'>
             <UnstyledLink href='/'>Home</UnstyledLink>
             <UnstyledLink href='/mentorship'>Mentorship</UnstyledLink>

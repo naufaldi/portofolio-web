@@ -28,6 +28,7 @@ module.exports = {
       backgroundImage: {
         'gradient-hero': 'linear-gradient(to bottom, #62D9FF, #3BF686)',
         'gradient-project': 'linear-gradient(0deg, #323443, #323443), #EFF6FF',
+        'gradient-hr': 'linear-gradient(180deg, #3BF686 0%, #4CA9FF 100%)',
       },
       fontFamily: {
         sora: ['Sora', ...fontFamily.sans],

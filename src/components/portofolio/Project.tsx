@@ -61,7 +61,7 @@ const Project = () => {
             <h6 className='text-gray-200 font-bold mb-5 font-inter hidden sm:block lg:mt-4'>
               Web Development
             </h6>
-            <h3 className='text-white text-5xl mb-7 font-sora font-bold hidden sm:block'>
+            <h3 className='text-white text-5xl mb-7 lg:mb-2 font-sora font-bold hidden sm:block'>
               Bolder Landingpage
             </h3>
             <p className='text-gray-200 text-sm lg:text-lg font-inter leading-6 lg:leading-normal'>

@@ -1,6 +1,5 @@
 import * as React from 'react';
 // import CopyToClipboard from 'react-copy-to-clipboard';
-import { FiMail } from 'react-icons/fi';
 import { SiGithub, SiLinkedin, SiTwitter } from 'react-icons/si';
 
 // import { Tooltip } from 'react-tippy';
@@ -49,9 +48,9 @@ function FooterLinks() {
 }
 
 function SocialLinks() {
-  const [copyStatus, setCopyStatus] = React.useState(
-    'Click the mail logo to copy'
-  );
+  // const [copyStatus, setCopyStatus] = React.useState(
+  //   'Click the mail logo to copy'
+  // );
 
   return (
     <div className='flex space-x-4 mb-12 mt-2'>
