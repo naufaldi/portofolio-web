@@ -12,7 +12,7 @@ import Section from '../common/Section';
 
 const Hero: FC = () => {
   return (
-    <Section name='hero' className='w-full pt-10 xl:pt-40'>
+    <Section name='hero' className='w-full pt-10 xl:pt-[200px]'>
       <Container>
         <Grid>
           <div className='col-span-2 col-start-2 xl:col-start-1 xl:col-span-full flex flex-col xl:flex-row justify-center xl:justify-start items-center xl:pt-[70px]'>

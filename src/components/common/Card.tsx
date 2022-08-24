@@ -3,7 +3,8 @@ import React, { FC } from 'react';
 
 const Card: FC<{
   className?: string;
-  image: string;
+  //image type
+  image: string | React.ReactNode;
   title: string;
   caption: string;
 }> = ({ className, image, title, caption }) => {

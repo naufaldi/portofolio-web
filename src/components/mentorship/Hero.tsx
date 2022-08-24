@@ -6,7 +6,7 @@ import Section from '../common/Section';
 
 export default function Hero() {
   return (
-    <Section name='hero-mentorship' className='w-full pt-6 xl:pt-40'>
+    <Section name='hero-mentorship' className='w-full pt-6 xl:pt-[200px]'>
       <Grid>
         <div className='col-span-full xl:col-span-5 flex flex-col'>
           <h1 className='text-white text-2xl text-center mb-4 xl:mb-10 xl:text-5xl  font-bold'>
