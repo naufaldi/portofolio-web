@@ -22,7 +22,7 @@ const HeaderDekstop: FC = () => {
     >
       <header
         className={clsx(
-          'max-w-screen-xl mx-auto flex flex-col text-white  transition-all',
+          'max-w-screen-xl px-[70px] mx-auto flex flex-col text-white  transition-all',
           offset !== 0 ? ' pt-7 pb-1' : ' pt-[52px] pb-[32px]'
         )}
       >
@@ -40,7 +40,9 @@ const HeaderDekstop: FC = () => {
             <UnstyledLink href='/mentorship'>Mentorship</UnstyledLink>
             <UnstyledLink href='/portofolio'>Portofolio</UnstyledLink>
             <UnstyledLink href='/snippet'>Snippet</UnstyledLink>
-            <UnstyledLink href='/blog'>Blog</UnstyledLink>
+            <UnstyledLink href='https://blog.cerita-faldi.xyz'>
+              Blog
+            </UnstyledLink>
           </div>
         </div>
         <hr

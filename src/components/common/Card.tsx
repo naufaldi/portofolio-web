@@ -1,13 +1,17 @@
 import clsx from 'clsx';
-import React, { FC } from 'react';
+import React from 'react';
 
-const Card: FC<{
+type CardProps = {
   className?: string;
   //image type
   image: string | React.ReactNode;
   title: string;
   caption: string;
-}> = ({ className, image, title, caption }) => {
+  whatIdo?: boolean | undefined;
+};
+
+const Card = ({ className, image, title, caption, whatIdo }: CardProps) => {
+  console.log('whatIdo', whatIdo);
   return (
     <div
       className={clsx(
@@ -15,17 +19,46 @@ const Card: FC<{
         className
       )}
     >
-      <div className='flex flex-col xl:flex-row'>
-        <div className='bg-gradient-to-b from-leaf-500 to-ocean-500 rounded-full h-[60px] w-[60px] xl:h-[120px] xl:w-[120px] -mt-16 xl:mt-0 ml-0  xl:-ml-20 mx-auto p-[2px] flex-shrink-0'>
+      <div
+        className={clsx(
+          'flex flex-col ',
+          whatIdo ? 'xl:flex-col' : 'xl:flex-row'
+        )}
+      >
+        <div
+          className={clsx(
+            'bg-gradient-to-b from-leaf-500 to-ocean-500 rounded-full     mx-auto p-[2px] flex-shrink-0',
+            whatIdo
+              ? ' ml-auto h-[60px] w-[60px] xl:h-[72px] xl:w-[72px]  xl:-mt-16 xl:mb-4 '
+              : 'ml-0 xl:h-[120px] xl:w-[120px] xl:mx-auto xl:-ml-16'
+          )}
+        >
           <div className='bg-dark-200 w-full h-full rounded-full flex items-center justify-center'>
             <span className='text-3xl xl:text-5xl'>{image}</span>
           </div>
         </div>
-        <div className='flex flex-col px-0 xl:px-16'>
-          <h4 className='text-white text-sm xl:text-3xl leading-6 xl:leading-normal mt-2 xl:mt-0 text-center xl:text-left font-bold '>
+        <div
+          className={clsx(
+            'flex flex-col px-0 ',
+            whatIdo ? 'xl:px-5' : 'xl:px-5 xl:justify-center'
+          )}
+        >
+          <h4
+            className={clsx(
+              'text-white text-sm leading-6 xl:leading-normal mt-2 xl:mt-0 text-center  font-bold ',
+              whatIdo
+                ? ' xl:text-base xl:text-center'
+                : ' xl:text-3xl xl:mb-2 xl:text-left'
+            )}
+          >
             {title}
           </h4>
-          <p className='text-gray-300 text-center xl:text-left text-sm xl:text-lg  leading-6  xl:leading-normal'>
+          <p
+            className={clsx(
+              'text-gray-300 text-center xl:text-left text-sm  leading-6  xl:leading-normal',
+              whatIdo ? ' xl:text-sm xl:text-center' : 'xl:text-lg'
+            )}
+          >
             {caption}
           </p>
         </div>

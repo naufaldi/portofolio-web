@@ -26,16 +26,19 @@ const Benefit: FC = () => {
         </div>
         <div className='col-span-full xl:col-span-8 space-y-20'>
           <Card
+            whatIdo={false}
             image='👨‍🏫 '
             title='Mentorship 1 : 1'
             caption='Video Call 1 : 1 dengan mentor untuk berdiskusi, bertanya dan konsultasi seputar mentorship frontend atau hal lainnya'
           />
           <Card
+            whatIdo={false}
             image='🎯 '
             title='Terarah '
             caption='Video Call 1 : 1 dengan mentor untuk berdiskusi, bertanya dan konsultasi seputar mentorship frontend atau hal lainnya'
           />
           <Card
+            whatIdo={false}
             image='🔖'
             title='Silabus'
             caption='Video Call 1 : 1 dengan mentor untuk berdiskusi, bertanya dan konsultasi seputar mentorship frontend atau hal lainnya'

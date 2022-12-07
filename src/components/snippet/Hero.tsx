@@ -5,13 +5,12 @@ import Section from '../common/Section';
 
 const Hero: FC = () => {
   return (
-    <Section name='portofolio' className='pt-6'>
+    <Section name='snippet' className='pt-6 xl:pt-[200px]'>
       <Grid>
         <div className='col-span-full'>
-          <h1 className='text-white text-2xl text-center mb-4'>
-            Code Snippets
-          </h1>
-          <hr className='text-gray-400 my-2' />
+          <h2 className='text-5xl font-bold text-white xl:mb-4'>
+            Code Snippet
+          </h2>
         </div>
       </Grid>
     </Section>

@@ -1,4 +1,4 @@
-import { GlobeIcon } from '@heroicons/react/solid';
+import { ClipboardCheckIcon, GlobeIcon } from '@heroicons/react/solid';
 import React, { FC } from 'react';
 
 import Card from '../common/Card';
@@ -7,12 +7,15 @@ import Section from '../common/Section';
 
 const WhatIdo: FC = () => {
   return (
-    <Section name='biography' className='pt-7 xl:pt-20'>
+    <Section name='biography' className='pt-7 xl:pt-24'>
       <Grid className='w-full'>
-        <h1 className='text-white col-span-full xl:col-span-5 xl:col-start-1 text-xl xl:text-3xl xl:font-semibold text-center xl:text-left'>
+        <h1 className='block xl:hidden text-white col-span-full xl:col-span-5 xl:col-start-1 text-xl xl:text-3xl xl:font-semibold text-center xl:text-left'>
           What I do
         </h1>
         <div className='col-span-full xl:col-span-5 xl:col-start-1'>
+          <h1 className=' text-white  text-xl xl:text-3xl xl:font-semibold text-center xl:text-left'>
+            What I do
+          </h1>
           <p className='text-sm xl:text-lg mt-3 text-gray-100 leading-6 font-inter tracking-wide'>
             Build and maintain websites,{' '}
             <span className='text-leaf-500'>frontend developer</span> FTW. I
@@ -23,15 +26,17 @@ const WhatIdo: FC = () => {
             . My motto is Beauty and function in equal measure as priority.
           </p>
         </div>
-        <div className='hidden xl:flex xl:space-x-8 col-span-5 col-end-13 xl:col-span-7 row-span-2'>
+        <div className='hidden xl:flex xl:space-x-8 col-span-5 col-end-13 xl:col-span-7 row-span-2 xl:row-span-1'>
           <Card
+            whatIdo={true}
             image={<GlobeIcon className='h-7 w-7 text-white' />}
-            title='Mentoring'
+            title='Web Development'
             caption='You will receive a customized plan for your fitness journey, and lots of support.'
           />
           <Card
-            image={<GlobeIcon className='h-7 w-7 text-white' />}
-            title='Mentoring'
+            whatIdo={true}
+            image={<ClipboardCheckIcon className='h-7 w-7 text-white' />}
+            title='UX Research'
             caption='You will receive a customized plan for your fitness journey, and lots of support.'
           />
           <button>

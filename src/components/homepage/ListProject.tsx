@@ -8,7 +8,7 @@ import Project from '../portofolio/Project';
 
 const ListProject: FC = () => {
   return (
-    <Section name='project-list' className='mt-20'>
+    <Section name='project-list' className='mt-20 xl:mt-36'>
       <Grid className='w-full'>
         <div className='col-span-5'>
           <h2 className='text-5xl font-bold text-white'>Featured Project</h2>
