@@ -2,6 +2,8 @@
 
 import { NextApiRequest, NextApiResponse } from 'next';
 
-export default function hello(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ name: 'Bambang' });
+import HelloJson from './json/hello.json';
+
+export default function hello(req, res) {
+  res.status(200).json(HelloJson);
 }

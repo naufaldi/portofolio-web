@@ -10,6 +10,12 @@ import Layout from '@/components/layout';
 import Seo from '@/components/Seo';
 
 export default function HomePage() {
+  //fetch api hello js
+  React.useEffect(() => {
+    fetch('/api/hello')
+      .then((res) => res.json())
+      .then((data) => console.log('data', data));
+  }, []);
   return (
     <>
       <Seo templateTitle='Home' />
