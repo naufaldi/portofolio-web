@@ -24,7 +24,7 @@ const Benefit: FC = () => {
             />
           </div>
         </div>
-        <div className='col-span-full xl:col-span-8 space-y-20'>
+        <div className='col-span-full  flex flex-col gap-y-12  sm:flex-row sm:gap-4 xl:gap-0 xl:flex-col  xl:col-span-8 w-full justify-evenly'>
           <Card
             whatIdo={false}
             image='👨‍🏫 '

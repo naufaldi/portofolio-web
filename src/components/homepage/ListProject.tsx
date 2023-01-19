@@ -36,9 +36,8 @@ const ListProject = ({ posts }: portofolioProps) => {
           );
         })}
 
-        <div className='col-span-2 my-4 sm:my-0'>
+        <div className='col-span-2 my-4 xl:my-0'>
           <Button variants='primary' className='flex items-center'>
-            {' '}
             <GiHamburgerMenu className='h-4 w-4 mr-2' /> See More
           </Button>
         </div>

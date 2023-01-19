@@ -27,7 +27,7 @@ export default function Hero() {
             </p>
           </div>
         </div>
-        <div className='flex flex-col  py-5 pl-9 pr-2 col-span-full xl:col-span-7 xl:col-start-6'>
+        <div className='hidden xl:flex flex-col  py-5 pl-9 pr-2 col-span-full xl:col-span-7 xl:col-start-6'>
           <div className='bg-dark-200 rounded-xl py-5 space-y-5 xl:space-y-0 flex flex-col xl:flex-row px-0 xl:px-10 gap-0 xl:gap-6'>
             <div className='flex flex-col  pl-[34px] xl:px-0 pr-1 relative '>
               <div className='flex'>

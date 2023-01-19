@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import React, { FC } from 'react';
 
+import UnstyledLink from '@/components/links/UnstyledLink';
+
 import FacebookIcon from '@/public/icon/facebook.svg';
 import InstagramIcon from '@/public/icon/instagram.svg';
 import TwitterIcon from '@/public/icon/twitter.svg';
@@ -9,7 +11,6 @@ import HeroImage from '@/public/image/homepage/naufaldi.png';
 import Container from '../common/Container';
 import Grid from '../common/Grid';
 import Section from '../common/Section';
-
 const Hero: FC = () => {
   return (
     <Section name='hero' className='w-full pt-10 xl:pt-[200px]'>
@@ -54,9 +55,12 @@ const Hero: FC = () => {
                   Lets connect
                 </h4>
                 <div className='flex  space-x-4 mt-0 xl:mt-3'>
-                  <InstagramIcon className='text-white h-6 w-6' />
-                  <TwitterIcon className='text-white h-6 w-6' />
-                  <FacebookIcon className='text-white h-6 w-6' />
+                  <UnstyledLink href='https://www.instagram.com/rafifsatriya'>
+                    <InstagramIcon className='text-white h-6 w-6' />
+                  </UnstyledLink>
+                  <UnstyledLink href='https://twitter.com/F2aldi'>
+                    <TwitterIcon className='text-white h-6 w-6' />
+                  </UnstyledLink>
                 </div>
               </div>
             </div>

@@ -15,7 +15,10 @@ const Card = ({ className, image, title, caption, whatIdo }: CardProps) => {
   return (
     <div
       className={clsx(
-        'relative pl-[18px] pr-4 pt-[26px] pb-[13px] xl:pb-[26px] bg-dark-200 rounded-xl max-w-[260px] xl:max-w-[655px] ml-0 xl:ml-auto ',
+        'relative pl-[18px] pr-4  xl:pb-[26px] bg-dark-200 rounded-xl  ml-0 xl:ml-auto ',
+        whatIdo
+          ? 'max-w-[260px] xl:max-w-[655px] pt-[26px] pb-[13px]'
+          : 'w-full py-6',
         className
       )}
     >
@@ -27,10 +30,10 @@ const Card = ({ className, image, title, caption, whatIdo }: CardProps) => {
       >
         <div
           className={clsx(
-            'bg-gradient-to-b from-leaf-500 to-ocean-500 rounded-full     mx-auto p-[2px] flex-shrink-0',
+            'bg-gradient-to-b from-leaf-500 to-ocean-500 rounded-full mx-auto p-[2px] flex-shrink-0',
             whatIdo
-              ? ' ml-auto h-[60px] w-[60px] xl:h-[72px] xl:w-[72px]  xl:-mt-16 xl:mb-4 '
-              : 'ml-0 xl:h-[120px] xl:w-[120px] xl:mx-auto xl:-ml-16'
+              ? ' ml-auto h-[60px] w-[60px] xl:h-[72px] xl:w-[72px] -mt-14 xl:-mt-16 xl:mb-4   '
+              : ' ml-auto h-[60px] w-[60px] xl:h-[72px] xl:w-[72px]  -mt-14 xl:my-auto xl:-ml-14'
           )}
         >
           <div className='bg-dark-200 w-full h-full rounded-full flex items-center justify-center'>

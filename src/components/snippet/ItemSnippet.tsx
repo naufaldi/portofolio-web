@@ -22,7 +22,7 @@ const ItemSnippet = ({ title, tags, description }: ItemSnippetProps) => {
   const tagsIconMap = tagsIcon.map((tag) => tag.name);
 
   return (
-    <div className='aspect-w-3 aspect-h-2 lg:aspect-w-5 lg:aspect-h-2'>
+    <div className='aspect-w-2 aspect-h-1 sm:aspect-w-3 sm:aspect-h-1 xl:aspect-w-5 xl:aspect-h-2'>
       <div className='bg-dark-200 px-[26px] py-6 flex flex-col w-full h-full rounded-xl'>
         <h4 className='text-white font-bold text-xl mb-4 font-sora'>{title}</h4>
         <p className='text-white text-sm'>{description}.</p>

@@ -71,40 +71,32 @@ function SocialLinks() {
 
 const footerLinks = [
   {
-    href: 'https://clarence.link/docs',
-    text: 'Docs',
+    href: 'https://karyakarsa.com/naufaldisatriya',
+    text: 'Karya Karsa',
   },
   {
-    href: 'https://clarence.link/booknotes',
-    text: 'Book Notes',
+    href: 'https://naufaldi.showwcase.com/',
+    text: 'Showwcase',
   },
   {
-    href: 'https://pw.theodorusclarence.com',
+    href: 'https://www.polywork.com/naufaldi',
     text: 'Polywork',
-  },
-  {
-    href: 'https://clarence.link/starters',
-    text: 'Starter Templates',
-  },
-  {
-    href: 'https://clarence.link/um',
-    text: 'Statistics',
   },
 ];
 
 const socials = [
   {
-    href: 'https://clarence.link/github',
+    href: 'https://github.com/naufaldi',
     icon: SiGithub,
     text: 'Github',
   },
   {
-    href: 'https://clarence.link/linkedin',
+    href: 'https://www.linkedin.com/in/naufaldirafif/',
     icon: SiLinkedin,
     text: 'Linkedin',
   },
   {
-    href: 'https://clarence.link/twt',
+    href: 'https://twitter.com/F2aldi',
     icon: SiTwitter,
     text: 'Twitter',
   },

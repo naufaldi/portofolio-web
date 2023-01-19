@@ -13,7 +13,7 @@ const WhatIdo: FC = () => {
           What I do
         </h1>
         <div className='col-span-full xl:col-span-5 xl:col-start-1'>
-          <h1 className=' text-white  text-xl xl:text-3xl xl:font-semibold text-center xl:text-left'>
+          <h1 className='hidden xl:block text-white  text-xl xl:text-3xl xl:font-semibold text-center xl:text-left'>
             What I do
           </h1>
           <p className='text-sm xl:text-lg mt-3 text-gray-100 leading-6 font-inter tracking-wide'>

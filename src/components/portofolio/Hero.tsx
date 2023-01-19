@@ -15,7 +15,7 @@ const Hero: FC = () => {
           </h1>
           <hr className='text-gray-400 my-2 block xl:hidden' />
         </div>
-        <div className='col-span-2'>
+        <div className='hidden sm:block col-span-2'>
           <div className='w-full h-[168px] relative ml-2'>
             <Image
               width={168}

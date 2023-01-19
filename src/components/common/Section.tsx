@@ -7,7 +7,7 @@ const Section: FC<{ name: string; children: ReactNode; className?: string }> =
       <section
         id={name}
         className={clsx(
-          'w-full px-[70px] max-w-md mx-auto xl:max-w-screen-xl',
+          'w-full px-6 sm:px-10 max-w-md sm:max-w-2xl mx-auto xl:max-w-screen-xl',
           className
         )}
       >
