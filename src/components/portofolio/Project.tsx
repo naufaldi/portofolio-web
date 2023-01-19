@@ -6,16 +6,23 @@ import Grid from '../common/Grid';
 
 const ImageUnsplash =
   'https://images.unsplash.com/photo-1541363111435-5c1b7d867904?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80';
-const Project = () => {
+
+interface ProjectProps {
+  title: string;
+  category: string;
+  description: string;
+  tags: string[];
+}
+const Project = ({ title, category, description, tags }: ProjectProps) => {
   return (
     <Grid className='gap-y-14 pt-5'>
       <div className='col-span-full'>
         <div className='flex flex-col lg:flex-row lg:gap-x-[30px]'>
           <h2 className='text-white text-2xl mb-3 font-bold block lg:hidden'>
-            Bolder Landingpage
+            {title}
           </h2>
           <h6 className='text-gray-200 text-base mb-[14px] font-bold block lg:hidden font-inter'>
-            Web Development
+            {category}
           </h6>
           <div className='w-full h-auto mb-5 lg:w-5/12'>
             <div className='bg-dark-200 relative flex flex-col px-4'>
@@ -59,15 +66,13 @@ const Project = () => {
           </div>
           <div className='flex flex-col lg:w-5/12'>
             <h6 className='text-gray-200 font-bold mb-5 font-inter hidden sm:block lg:mt-4'>
-              Web Development
+              {category}
             </h6>
             <h3 className='text-white text-5xl mb-7 lg:mb-2 font-sora font-bold hidden sm:block'>
-              Bolder Landingpage
+              {title}
             </h3>
             <p className='text-gray-200 text-sm lg:text-lg font-inter leading-6 lg:leading-normal'>
-              Serrow restructured and designed core pages, creating interactive
-              elements that put users in control and allowed them to discover
-              the information needed to make a decision.
+              {description}
             </p>
           </div>
         </div>

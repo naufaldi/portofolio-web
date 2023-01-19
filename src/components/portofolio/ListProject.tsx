@@ -3,10 +3,27 @@ import React, { FC } from 'react';
 import Project from './Project';
 import Section from '../common/Section';
 
-const ListProject: FC = () => {
+const ListProject: FC = ({ posts }: any) => {
   return (
     <Section name='list-project'>
-      <Project />
+      {posts.map((post: any, index: number) => {
+        //extract slug and frontmatter
+        const { slug, frontmatter } = post;
+        //extract frontmatter properties
+        const { title, category, date, bannerImage, tags, description } =
+          frontmatter;
+
+        //JSX for individual blog listing
+        return (
+          <Project
+            key={index}
+            title={title}
+            category={category}
+            description={description}
+            tags={tags}
+          />
+        );
+      })}
     </Section>
   );
 };

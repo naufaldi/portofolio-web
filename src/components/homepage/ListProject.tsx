@@ -6,19 +6,36 @@ import Grid from '../common/Grid';
 import Section from '../common/Section';
 import Project from '../portofolio/Project';
 
-const ListProject: FC = () => {
+import { portofolioProps } from '@/types/portofolio';
+
+const ListProject = ({ posts }: portofolioProps) => {
+  console.log('posts', posts);
   return (
     <Section name='project-list' className='mt-20 xl:mt-36'>
       <Grid className='w-full'>
         <div className='col-span-5'>
           <h2 className='text-5xl font-bold text-white'>Featured Project</h2>
         </div>
-        <div className='col-span-full'>
-          <Project />
-        </div>
-        <div className='col-span-full'>
-          <Project />
-        </div>
+        {posts.slice(0, 2).map((post: any, index: number) => {
+          //extract slug and frontmatter
+          const { slug, frontmatter } = post;
+          //extract frontmatter properties
+          const { title, category, date, bannerImage, tags, description } =
+            frontmatter;
+
+          //JSX for individual blog listing
+          return (
+            <div className='col-span-full' key={index}>
+              <Project
+                title={title}
+                category={category}
+                description={description}
+                tags={tags}
+              />
+            </div>
+          );
+        })}
+
         <div className='col-span-2 my-4 sm:my-0'>
           <Button variants='primary' className='flex items-center'>
             {' '}

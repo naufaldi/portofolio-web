@@ -8,34 +8,16 @@ import Hero from '@/components/portofolio/Hero';
 import ListProject from '@/components/portofolio/ListProject';
 import Seo from '@/components/Seo';
 
-const Portofolio = ({ posts }: any) => {
+import { portofolioProps } from '@/types/portofolio';
+
+const Portofolio = ({ posts }: portofolioProps) => {
   console.log('postss', posts);
   return (
     <>
       <Seo description='portofolio-naufaldi' />
       <Layout>
         <Hero />
-        <ListProject />
-        <div>
-          {posts.map((post: any) => {
-            //extract slug and frontmatter
-            const { slug, frontmatter } = post;
-            //extract frontmatter properties
-            const { title, author, category, date, bannerImage, tags } =
-              frontmatter;
-
-            //JSX for individual blog listing
-            return (
-              <article key={title}>
-                <Link href={`/project/${slug}`}>
-                  <h1>{title}</h1>
-                </Link>
-                <h3>{author}</h3>
-                <h3>{date}</h3>
-              </article>
-            );
-          })}
-        </div>
+        <ListProject posts={posts} />
       </Layout>
     </>
   );
@@ -59,7 +41,7 @@ export async function getStaticProps() {
       frontmatter,
     };
   });
-  console.log('post', posts);
+
   // Return the pages static props
   return {
     props: {

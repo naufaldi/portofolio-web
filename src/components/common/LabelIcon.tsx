@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 
 interface LabelIconProps {
-  name: string;
-  imgSrc: string;
+  name?: string;
+  imgSrc?: string;
 }
 
 const LabelIcon: FC<LabelIconProps> = ({ name, imgSrc }) => {

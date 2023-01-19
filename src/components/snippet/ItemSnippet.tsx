@@ -2,18 +2,44 @@ import React from 'react';
 
 import LabelIcon from '../common/LabelIcon';
 
-const ItemSnippet = () => {
+type ItemSnippetProps = {
+  title?: string;
+  tags?: string[];
+  description?: string;
+};
+
+const ItemSnippet = ({ title, tags, description }: ItemSnippetProps) => {
+  const tagsIcon = [
+    {
+      name: 'tailwindcss',
+      imgSrc: '/icon/tailwind.svg',
+    },
+    {
+      name: 'reactjs',
+      imgSrc: '/icon/react.svg',
+    },
+  ];
+  const tagsIconMap = tagsIcon.map((tag) => tag.name);
+
   return (
     <div className='aspect-w-3 aspect-h-2 lg:aspect-w-5 lg:aspect-h-2'>
       <div className='bg-dark-200 px-[26px] py-6 flex flex-col w-full h-full rounded-xl'>
-        <h4 className='text-white font-bold text-xl mb-4 font-sora'>
-          Nextjs Starter
-        </h4>
-        <p className='text-white text-sm'>A dead simple for nextjs project.</p>
+        <h4 className='text-white font-bold text-xl mb-4 font-sora'>{title}</h4>
+        <p className='text-white text-sm'>{description}.</p>
         <div className='flex justify-between items-center mt-auto'>
           <div className='flex space-x-2 '>
-            <LabelIcon name='Tailwind Icon' imgSrc='/icon/tailwind.svg' />
-            <LabelIcon name='React Icon' imgSrc='/icon/react.svg' />
+            {tags?.map((tag, index) => {
+              if (tagsIconMap.includes(tag)) {
+                const icon = tagsIcon.find((icon) => icon.name === tag);
+                return (
+                  <LabelIcon
+                    key={index}
+                    name={icon?.name}
+                    imgSrc={icon?.imgSrc}
+                  />
+                );
+              }
+            })}
           </div>
           <div className='flex items-center space-x-3'>
             <svg

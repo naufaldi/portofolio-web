@@ -6,25 +6,33 @@ import Grid from '../common/Grid';
 import Section from '../common/Section';
 import ItemSnippet from '../snippet/ItemSnippet';
 
-const ListSnippet = () => {
+import { snippetProps } from '@/types/portofolio';
+
+const ListSnippet = ({ posts }: snippetProps) => {
   return (
     <Section name='list-snippet ' className='mt-20'>
       <Grid className='gap-y-6'>
         <div className='col-span-12'>
           <h2 className='text-5xl font-bold text-white '>Code Snippet</h2>
         </div>
-        <div className='col-span-6'>
-          <ItemSnippet />
-        </div>
-        <div className='col-span-6'>
-          <ItemSnippet />
-        </div>
-        <div className='col-span-6'>
-          <ItemSnippet />
-        </div>
-        <div className='col-span-6'>
-          <ItemSnippet />
-        </div>
+        {posts.map((post: any, index: number) => {
+          //extract slug and frontmatter
+          const { slug, frontmatter } = post;
+          //extract frontmatter properties
+          const { title, tags, description } = frontmatter;
+
+          //JSX for individual blog listing
+          return (
+            <div className='col-span-6' key={index}>
+              <ItemSnippet
+                title={title}
+                tags={tags}
+                description={description}
+              />
+            </div>
+          );
+        })}
+
         <div className='col-span-2 my-4 sm:my-0'>
           <Button variants='primary' className='flex items-center'>
             {' '}
