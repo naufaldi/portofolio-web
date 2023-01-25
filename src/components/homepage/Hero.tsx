@@ -3,7 +3,6 @@ import React, { FC } from 'react';
 
 import UnstyledLink from '@/components/links/UnstyledLink';
 
-import FacebookIcon from '@/public/icon/facebook.svg';
 import InstagramIcon from '@/public/icon/instagram.svg';
 import TwitterIcon from '@/public/icon/twitter.svg';
 import HeroImage from '@/public/image/homepage/naufaldi.png';

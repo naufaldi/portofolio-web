@@ -1,4 +1,3 @@
-import { ArrowCircleDownIcon } from '@heroicons/react/solid';
 import Link from 'next/link';
 
 import UnstyledLink from './links/UnstyledLink';

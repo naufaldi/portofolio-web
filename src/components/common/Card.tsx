@@ -11,7 +11,6 @@ type CardProps = {
 };
 
 const Card = ({ className, image, title, caption, whatIdo }: CardProps) => {
-  console.log('whatIdo', whatIdo);
   return (
     <div
       className={clsx(

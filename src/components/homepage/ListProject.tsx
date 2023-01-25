@@ -1,4 +1,3 @@
-import React, { FC } from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
 
 import Button from '../buttons/Button';
@@ -8,6 +7,18 @@ import Project from '../portofolio/Project';
 
 import { portofolioProps } from '@/types/portofolio';
 
+type postProps = {
+  slug: string;
+  frontmatter: {
+    title: string;
+    description: string;
+    category?: string;
+    date: string;
+    tag: string[];
+    bannerImage: string;
+    url: string;
+  };
+};
 const ListProject = ({ posts }: portofolioProps) => {
   return (
     <Section name='project-list' className='mt-20 xl:mt-36'>
@@ -15,7 +26,7 @@ const ListProject = ({ posts }: portofolioProps) => {
         <div className='col-span-5'>
           <h2 className='text-5xl font-bold text-white'>Featured Project</h2>
         </div>
-        {posts.slice(0, 2).map((post: any, index: number) => {
+        {posts.slice(0, 2).map((post: postProps, index: number) => {
           //extract slug and frontmatter
           const { slug, frontmatter } = post;
           //extract frontmatter properties
