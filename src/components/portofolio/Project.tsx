@@ -3,6 +3,7 @@ import Image from 'next/image';
 import React from 'react';
 
 import Grid from '../common/Grid';
+import NextImage from '../common/NextImage';
 
 const ImageUnsplash =
   'https://images.unsplash.com/photo-1541363111435-5c1b7d867904?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80';
@@ -12,8 +13,24 @@ interface ProjectProps {
   category: string;
   description: string;
   tags: string[];
+  bannerImage: string;
 }
-const Project = ({ title, category, description, tags }: ProjectProps) => {
+const Project = ({
+  title,
+  category,
+  description,
+  tags,
+  bannerImage,
+}: ProjectProps) => {
+  const tagsList: { [key: string]: any } = {
+    tailwindcss: '/icon/tailwind.svg',
+    react: '/icon/react.svg',
+    nextjs: '/icon/nextjs.svg',
+    nodejs: '/icon/nodejs.svg',
+    javascript: '/icon/javascript.svg',
+    typescript: '/icon/typescript.svg',
+    chakraui: '/icon/chakraui.svg',
+  };
   return (
     <Grid className='gap-y-14 pt-5'>
       <div className='col-span-full'>
@@ -31,35 +48,39 @@ const Project = ({ title, category, description, tags }: ProjectProps) => {
               </button>
               <div className='flex flex-col px-2 h-72 overflow-hidden'>
                 <div className='flex space-x-2 '>
-                  <label
-                    htmlFor='logo'
-                    className='bg-white rounded-sm flex items-center justify-center h-6 w-6'
-                  >
-                    <img
-                      src='/icon/tailwind.svg'
-                      className='h-4 w-4'
-                      alt='Tailwind Logo'
-                    />
-                  </label>
-                  <label
-                    htmlFor='logo'
-                    className='bg-white rounded-sm flex items-center justify-center h-6 w-6'
-                  >
-                    <img
-                      src='/icon/react.svg'
-                      className='h-4 w-4'
-                      alt='Tailwind Logo'
-                    />
-                  </label>
+                  {tags.map((tag, index) => (
+                    <label
+                      htmlFor='logo'
+                      className='bg-white rounded-sm flex items-center justify-center h-6 w-6'
+                      key={index}
+                    >
+                      <img
+                        src={tagsList[tag]}
+                        className='h-4 w-4'
+                        alt='Tailwind Logo'
+                      />
+                    </label>
+                  ))}
                 </div>
-                <div className='aspect-w-4 aspect-h-3 relative mt-8 overflow-hidden '>
-                  <Image
-                    src={ImageUnsplash}
+                <div className='relative mt-8 overflow-hidden h-full'>
+                  {/* <Image
+                    src={bannerImage || ImageUnsplash}
                     alt='unsplash'
                     layout='fill'
                     width={228}
                     height={158}
-                  />
+                  /> */}
+                  <div className='absolute top-0 left-0 right-0'>
+                    <NextImage
+                      imgClassName='object-cover'
+                      useSkeleton
+                      className='w-[452px]'
+                      src={bannerImage || ImageUnsplash}
+                      width='452'
+                      height='280'
+                      alt='Icon'
+                    />
+                  </div>
                 </div>
               </div>
             </div>

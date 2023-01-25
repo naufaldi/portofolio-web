@@ -21,6 +21,7 @@ const ListProject: FC = ({ posts }: any) => {
             category={category}
             description={description}
             tags={tags}
+            bannerImage={bannerImage}
           />
         );
       })}

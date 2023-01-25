@@ -6916,6 +6916,11 @@ table@^6.0.9:
     string-width "^4.2.0"
     strip-ansi "^6.0.0"
 
+tailwind-merge@^1.8.1:
+  version "1.8.1"
+  resolved "https://balong.efishery.com/tailwind-merge/-/tailwind-merge-1.8.1.tgz#0e56c8afbab2491f72e06381043ffec8b720ba04"
+  integrity sha512-+fflfPxvHFr81hTJpQ3MIwtqgvefHZFUHFiIHpVIRXvG/nX9+gu2P7JNlFu2bfDMJ+uHhi/pUgzaYacMoXv+Ww==
+
 tailwindcss@^3.0.19:
   version "3.0.19"
   resolved "https://registry.npmjs.org/tailwindcss/-/tailwindcss-3.0.19.tgz"

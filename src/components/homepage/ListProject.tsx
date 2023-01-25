@@ -9,7 +9,6 @@ import Project from '../portofolio/Project';
 import { portofolioProps } from '@/types/portofolio';
 
 const ListProject = ({ posts }: portofolioProps) => {
-  console.log('posts', posts);
   return (
     <Section name='project-list' className='mt-20 xl:mt-36'>
       <Grid className='w-full'>
@@ -31,6 +30,7 @@ const ListProject = ({ posts }: portofolioProps) => {
                 category={category}
                 description={description}
                 tags={tags}
+                bannerImage={bannerImage}
               />
             </div>
           );

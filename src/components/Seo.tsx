@@ -2,12 +2,11 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 
 const defaultMeta = {
-  title: 'Next.js + Tailwind CSS + TypeScript Starter',
-  site_name: 'Next.js + Tailwind CSS + TypeScript Starter',
-  description:
-    ' A starter for Next.js, Tailwind CSS, and TypeScript with Absolute Import, Seo, Link component, pre-configured with Husky',
-  url: 'https://theodorusclarence.com',
-  image: 'https://theodorusclarence.com/favicon/large-og.jpg',
+  title: 'Naufaldi Rafif S Personal Website',
+  site_name: 'Naufaldi Site',
+  description: ' Personal Website Portofolio Naufaldi Rafif S',
+  url: 'https://faldi.xyz',
+  image: 'https://faldi.xyz/favicon/large-og.png',
   type: 'website',
   robots: 'follow, index',
 };
@@ -57,7 +56,7 @@ export default function Seo(props: SeoProps) {
           <meta
             name='author'
             property='article:author'
-            content='Theodorus Clarence'
+            content='Naufaldi Rafif S'
           />
         </>
       )}
