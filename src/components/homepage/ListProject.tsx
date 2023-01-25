@@ -14,7 +14,7 @@ type postProps = {
     description: string;
     category?: string;
     date: string;
-    tag: string[];
+    tags: string[];
     bannerImage: string;
     url: string;
   };
