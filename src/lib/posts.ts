@@ -9,12 +9,12 @@ const postsDirectory = path.join(process.cwd(), 'src/contents/project');
 export const getPostSlugs = () => {
   const fileNames = fs.readdirSync(postsDirectory);
 
-  return fileNames.map((fileName) => fileName.replace(/\.mdx$/, ''));
+  return fileNames.map((fileName) => fileName.replace(/\.md$/, ''));
 };
 
 export const getPostFrontMatter = (slug: string): TPostFrontMatter => {
   // read markdown file as string
-  const fullPath = path.join(postsDirectory, `${slug}.mdx`);
+  const fullPath = path.join(postsDirectory, `${slug}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
 
   // use front-matter to parse the post metadata section

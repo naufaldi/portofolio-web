@@ -3,7 +3,8 @@ import React, { FC } from 'react';
 import Project from './Project';
 import Section from '../common/Section';
 
-const ListProject: FC = ({ posts }: any) => {
+import { portofolioProps } from '@/types/portofolio';
+const ListProject = ({ posts }: portofolioProps) => {
   return (
     <Section name='list-project'>
       {posts.map((post: any, index: number) => {

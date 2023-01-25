@@ -4,7 +4,7 @@ export interface portofolioProps {
     frontmatter: {
       title: string;
       description: string;
-      category?: string;
+      category?: string | undefined;
       date: string;
       tags: string[];
       bannerImage: string;

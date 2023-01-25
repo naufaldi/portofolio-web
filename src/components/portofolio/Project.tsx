@@ -10,7 +10,7 @@ const ImageUnsplash =
 
 interface ProjectProps {
   title: string;
-  category: string;
+  category: string | undefined;
   description: string;
   tags: string[];
   bannerImage: string;

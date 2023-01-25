@@ -11,7 +11,6 @@ import Seo from '@/components/Seo';
 import { portofolioProps } from '@/types/portofolio';
 
 const Portofolio = ({ posts }: portofolioProps) => {
-  console.log('postss', posts);
   return (
     <>
       <Seo description='portofolio-naufaldi' />

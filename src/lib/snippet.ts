@@ -6,7 +6,7 @@ export const getSnippetPost = () => {
 
   // get frontmatter & slug from each post
   const post = files.map((fileName) => {
-    const slug = fileName.replace('.mdx', '');
+    const slug = fileName.replace('.md', '');
     const readFile = fs.readFileSync(
       `src/contents/snippet/${fileName}`,
       'utf-8'

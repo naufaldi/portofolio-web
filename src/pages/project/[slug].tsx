@@ -2,17 +2,28 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import md from 'markdown-it';
 
+type PostProps = {
+  frontmatter: {
+    title: string;
+    description: string;
+    category?: string;
+    date: string;
+    tags: string[];
+    bannerImage: string;
+    url: string;
+  };
+  content: string;
+};
+
 // The page for each post
-export default function Post({ frontmatter, content }) {
-  const { title, author, category, date, bannerImage, tags } = frontmatter;
+export default function Post({ frontmatter, content }: PostProps) {
+  const { title, category, date, bannerImage, tags } = frontmatter;
 
   return (
     <main>
       <img src={bannerImage} alt={title} />
       <h1>{title}</h1>
-      <h2>
-        {author} || {date}
-      </h2>
+      <h2> {date}</h2>
       <h3>
         {category} || {tags.join()}
       </h3>
@@ -39,7 +50,7 @@ export async function getStaticPaths() {
 }
 
 // Generate the static props for the page
-export async function getStaticProps({ params: { slug } }) {
+export async function getStaticProps({ params: { slug } }: any) {
   const fileName = fs.readFileSync(`src/contents/project/${slug}.md`, 'utf-8');
   const { data: frontmatter, content } = matter(fileName);
   return {
